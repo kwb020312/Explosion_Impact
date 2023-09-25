@@ -28,11 +28,11 @@ function App() {
       <PerspectiveCamera
         makeDefault
         fov={33}
-        position={[-0.09, 16.01, -27.9]}
+        position={[-0.07, 16.41, -24.1]}
       />
       {/* 컨트롤러 */}
       <OrbitControls
-        target={[0.304, 0.806, 0.427]}
+        target={[0.02, 0.806, 0.427]}
         maxPolarAngle={Math.PI * 0.45}
       />
 
