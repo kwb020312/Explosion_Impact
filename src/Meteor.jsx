@@ -1,8 +1,10 @@
+import { NodeToyMaterial } from "@nodetoy/react-nodetoy";
 import {
   MeshTransmissionMaterial,
   useGLTF,
   useTexture,
 } from "@react-three/drei";
+import { data as meteorShaderData } from "./meteor-shader";
 
 const Meteor = () => {
   const { nodes } = useGLTF("/assets/models/meteor.glb");
@@ -29,6 +31,10 @@ const Meteor = () => {
           attenuationDistance={0.2}
           attenuationColor={"#e2ae5b"}
         />
+      </mesh>
+
+      <mesh geometry={nodes.meteor.geometry} scale={[1.02, 1.02, 1.02]}>
+        <NodeToyMaterial data={meteorShaderData} />
       </mesh>
     </>
   );
