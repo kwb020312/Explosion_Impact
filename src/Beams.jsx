@@ -31,7 +31,7 @@ const Beams = () => {
 function Beam({ geometry, beams_mask, beam_index }) {
   return (
     <mesh geometry={geometry}>
-      <meshBasicMaterial map={beam_index} />
+      <meshBasicMaterial map={beams_mask} />
     </mesh>
   );
 }
