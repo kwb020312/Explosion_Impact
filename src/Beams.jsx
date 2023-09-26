@@ -3,7 +3,8 @@ import {
   useGLTF,
   useTexture,
 } from "@react-three/drei";
-import { DoubleSide } from "three";
+import { useMemo } from "react";
+import { DoubleSide, Vector3 } from "three";
 
 const Beams = () => {
   const { nodes } = useGLTF("/assets/models/beams.glb");
@@ -34,6 +35,28 @@ const Beams = () => {
 };
 
 function Beam({ geometry, beams_mask, beam_index }) {
+  const { vectors, initialPositionAttribute } = useMemo(() => {
+    let vectors = [];
+
+    const initialPositionAttribute = geometry.clone().getAttribute("position");
+
+    for (let i = 0; i < initialPositionAttribute.count; i++) {
+      let vector = new Vector3();
+      vector.fromBufferAttribute(initialPositionAttribute, i);
+
+      const idx = vectors.findIndex((vec, i) => {
+        if (vec.x === vector.x && vec.y === vector.y && vec.z === vector.z)
+          return true;
+      });
+
+      if (idx === -1) vectors.push(vector);
+    }
+
+    vectors.sort((a, b) => a.y - b.y);
+
+    return { vectors, initialPositionAttribute };
+  }, []);
+
   const isEven = beam_index % 2 === 0;
   const color = isEven ? "#fff7ed" : "#feedd7";
   const emissive = isEven ? [0.025, 0.011, 0.01] : [0.035, 0.0195, 0.01];
