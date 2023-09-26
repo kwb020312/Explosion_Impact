@@ -46,7 +46,8 @@ function App() {
       <Suspense fallback={null}>
         <Scene />
         <Meteor />
-        <Beams />
+        {/* 용량 문제로 빔 비활성화 */}
+        {/* <Beams /> */}
       </Suspense>
     </>
   );
