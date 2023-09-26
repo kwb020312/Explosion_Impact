@@ -1,8 +1,11 @@
-# React + Vite
+# 💥Explosion_Impact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💥Custom Shader를 활용해 폭발 현장을 구현하는 예제를 살펴보고 연습해보자!
 
-Currently, two official plugins are available:
+[얼마나 심각한지 구경하러 가기]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/kwb020312/Explosion_Impact/assets/46777310/994d1842-1a77-409a-85c3-a86d337b753e)
+
+![image](https://github.com/kwb020312/Explosion_Impact/assets/46777310/02fcaaa9-7c0c-4207-9205-8b879bf2c95f)
+
+![image](https://github.com/kwb020312/Explosion_Impact/assets/46777310/3f28c03e-fbfe-4f31-88c9-4264bdf02455)
