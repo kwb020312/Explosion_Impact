@@ -1,5 +1,5 @@
 import { useGLTF, useTexture } from "@react-three/drei";
-import { data as fragmentsShader } from "./fragments-shader";
+import { data as sparklesShader } from "./sparkles-shader";
 import { NodeToyMaterial } from "@nodetoy/react-nodetoy";
 
 const Scene = () => {
@@ -30,7 +30,7 @@ const Scene = () => {
         <meshBasicMaterial map={ground} />
       </mesh>
       <mesh geometry={nodes.ground.geometry}>
-        <NodeToyMaterial data={fragmentsShader} />
+        <NodeToyMaterial data={sparklesShader} />
       </mesh>
       <mesh geometry={nodes.ground2.geometry}>
         <meshBasicMaterial map={ground2} />
