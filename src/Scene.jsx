@@ -1,4 +1,6 @@
 import { useGLTF, useTexture } from "@react-three/drei";
+import { data as fragmentsShader } from "./fragments-shader";
+import { NodeToyMaterial } from "@nodetoy/react-nodetoy";
 
 const Scene = () => {
   const { nodes } = useGLTF("/assets/models/scene.glb");
@@ -26,6 +28,9 @@ const Scene = () => {
     <>
       <mesh geometry={nodes.ground.geometry}>
         <meshBasicMaterial map={ground} />
+      </mesh>
+      <mesh geometry={nodes.ground.geometry}>
+        <NodeToyMaterial data={fragmentsShader} />
       </mesh>
       <mesh geometry={nodes.ground2.geometry}>
         <meshBasicMaterial map={ground2} />

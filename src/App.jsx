@@ -7,6 +7,8 @@ import { Suspense, useEffect } from "react";
 import Scene from "./Scene";
 import { useThree } from "@react-three/fiber";
 import Meteor from "./Meteor";
+import { NodeToyTick } from "@nodetoy/react-nodetoy";
+import Beams from "./Beams";
 
 function App() {
   const state = useThree();
@@ -37,10 +39,14 @@ function App() {
         maxPolarAngle={Math.PI * 0.45}
       />
 
+      {/* 지면 전류 */}
+      <NodeToyTick />
+
       {/* 메인 모델 호출 */}
       <Suspense fallback={null}>
         <Scene />
         <Meteor />
+        <Beams />
       </Suspense>
     </>
   );
