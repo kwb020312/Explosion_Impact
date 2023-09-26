@@ -102,7 +102,7 @@ function Beam({ geometry, beams_mask, beam_index }) {
   return (
     <mesh geometry={geometry}>
       {/* <meshBasicMaterial map={beams_mask} /> */}
-      <MeshTransmissionMaterial
+      {/* <MeshTransmissionMaterial
         alphaToCoverage={true}
         transparent={true}
         alphaMap={beams_mask}
@@ -116,7 +116,7 @@ function Beam({ geometry, beams_mask, beam_index }) {
         anisotropy={10}
         color={color}
         emissive={emissive}
-      />
+      /> */}
     </mesh>
   );
 }
