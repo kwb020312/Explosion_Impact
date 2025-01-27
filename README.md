@@ -1,6 +1,6 @@
 # 💥Explosion_Impact
 
-💥Custom Shader를 활용해 폭발 현장을 구현하는 예제를 살펴보고 연습해보자!
+💥Custom Shader를 활용해 폭발 현장을 구현하는 예제를 살펴보고 연습해보자! 
 
 [얼마나 심각한지 구경하러 가기](https://explosion-impact.vercel.app/)
 
